@@ -16,7 +16,6 @@ public class Parallax : MonoBehaviour
     private void Update()
     {
         transform.position = transform.parent.position * parallaxScale + new Vector3(90 * offset, yOffset, 0);
-        Debug.Log(transform.position.x);
         if (transform.position.x < -45)
         {
             offset += 1;

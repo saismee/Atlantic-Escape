@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -26,13 +27,19 @@ public class CharacterController : MonoBehaviour
         // should support controllers
 
         rb.velocity = moveVector * moveSpeed;
+        rb.rotation = moveVector.y * 15f;
 
         float horizontalLimit = (Camera.main.orthographicSize * Screen.width / Screen.height) - 0.75f;
         float verticalLimit = Camera.main.orthographicSize - 0.75f;
 
         transform.position = new Vector2(
-            Mathf.Clamp(transform.position.x, -horizontalLimit, horizontalLimit),
+            Mathf.Clamp(transform.position.x, -horizontalLimit - 2f, horizontalLimit),
             Mathf.Clamp(transform.position.y, -verticalLimit, verticalLimit)
         );
+
+        if (transform.position.x < -horizontalLimit - 1f)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

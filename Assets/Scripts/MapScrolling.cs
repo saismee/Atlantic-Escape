@@ -9,9 +9,7 @@ public class MapScrolling : MonoBehaviour
     private void Update()
     {
         transform.position += new Vector3(-Mathf.Abs(scrollSpeed) * Time.deltaTime, 0, 0);
-        /*if (transform.position.x < -45f)
-        {
-            transform.position += new Vector3(90f, 0, 0);
-        }*/
+
+        GameManager.Instance.score += Time.deltaTime * 10f;
     }
 }

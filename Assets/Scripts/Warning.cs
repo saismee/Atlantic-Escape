@@ -9,5 +9,9 @@ public class Warning : MonoBehaviour
     private void Update()
     {
         blinkTime += Time.deltaTime;
+        if (blinkTime < 1f) return;
+        blinkTime = 0f;
+
+
     }
 }

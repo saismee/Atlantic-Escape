@@ -5,6 +5,7 @@ using UnityEngine;
 public class RandomObstacle : MonoBehaviour
 {
     public GameObject[] obstacles;
+    public GameObject[] warnings;
 
     public float spawnTime = 0;
     private float spawnCooldown = 0;
@@ -20,6 +21,10 @@ public class RandomObstacle : MonoBehaviour
         spawnCooldown = spawnTime;
 
         GameObject newPrefab = Instantiate(obstacles[Random.Range(0, obstacles.Length)], transform);
-        newPrefab.transform.position = new Vector2(30, Random.Range(-newPrefab.transform.position.y, newPrefab.transform.position.y));
+        newPrefab.transform.position = new Vector2(45, Random.Range(-newPrefab.transform.position.y, newPrefab.transform.position.y));
+
+        Obstacle obstacle = newPrefab.GetComponent<Obstacle>();
+        GameObject newWarning = Instantiate(warnings[(int)obstacle.warningType]);
+        newWarning.transform.position = new Vector2((Camera.main.orthographicSize * Screen.width / Screen.height) -1.25f, newPrefab.transform.position.y + obstacle.yOffset);
     }
 }

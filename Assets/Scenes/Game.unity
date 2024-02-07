@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8658f6c889ee99646a813b626e42c2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 10
+  scrollSpeed: 15
 --- !u!1 &394502289
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +836,9 @@ MonoBehaviour:
   - {fileID: 5662808691535463773, guid: 3d1c51168f8e9cf4c89ce094251a0611, type: 3}
   - {fileID: 1751243816142615849, guid: 9dcb6b01c6292b7488a8d69032980960, type: 3}
   - {fileID: 1751243816142615849, guid: 55bd349eaf33d08488ea39d49b46d147, type: 3}
+  warnings:
+  - {fileID: 4446612717399523081, guid: 6c50adea7a79fb14c93e71855ea5c303, type: 3}
+  - {fileID: 754531127197389438, guid: ecb127b4ee59ac947a73dccc980ad3de, type: 3}
   spawnTime: 6
 --- !u!1 &1257911838
 GameObject:

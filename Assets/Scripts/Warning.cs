@@ -8,12 +8,17 @@ public class Warning : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float blinkSpeed = 0.75f;
 
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void Update()
     {
         blinkTime += Time.deltaTime;
         spriteRenderer.enabled = blinkTime % blinkSpeed > blinkSpeed / 2f;
         
-        if (blinkTime > 3f)
+        if (blinkTime > 2.5f)
         {
             Destroy(gameObject);
         }

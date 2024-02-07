@@ -50,10 +50,4 @@ public class FSirenEnemy : MonoBehaviour
             yield return new WaitForSeconds(0.75f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Player")) return;
-        //GameManager.GameOver();
-    }
 }

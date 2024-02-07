@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3045984128966070337}
   - component: {fileID: 3045984128966070396}
   - component: {fileID: 3045984128966070339}
+  - component: {fileID: 5653755869277770140}
   m_Layer: 0
   m_Name: SmallNote
   m_TagString: Untagged
@@ -123,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.4114909}
   serializedVersion: 2
   m_Radius: 0.31585205
+--- !u!114 &5653755869277770140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3045984128966070336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169a264ed53830e4498dc72a6dc5cd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punishment: 6

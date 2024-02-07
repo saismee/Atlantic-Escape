@@ -11,6 +11,13 @@ public class CharacterController : MonoBehaviour
 
     private Vector2 moveVector;
 
+    private float punishment;
+
+    public void Punish(float amount)
+    {
+        punishment += amount;
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,6 +25,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        punishment = Mathf.Max(punishment - (Time.deltaTime * 3f), 0);
         moveVector = Vector2.Lerp(
             moveVector,
             new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized,
@@ -43,7 +51,7 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = moveVector * moveSpeed;
+        rb.velocity = moveVector * moveSpeed - new Vector2(punishment, punishment / 2f);
         rb.rotation = moveVector.y * 15f;
     }
 }

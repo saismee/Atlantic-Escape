@@ -832,6 +832,9 @@ MonoBehaviour:
   - {fileID: 5662808691535463773, guid: 3d1c51168f8e9cf4c89ce094251a0611, type: 3}
   - {fileID: 1751243816142615849, guid: 9dcb6b01c6292b7488a8d69032980960, type: 3}
   - {fileID: 1751243816142615849, guid: 55bd349eaf33d08488ea39d49b46d147, type: 3}
+  - {fileID: 8380225914802452813, guid: c2c8300a3ae7a66458424f1956afb337, type: 3}
+  - {fileID: 8380225914802452813, guid: cb52b474584b9794eb2aa07b50b31721, type: 3}
+  - {fileID: 8380225914802452813, guid: 5cec7ca673d0f6f49bf9ce2b23f3ddef, type: 3}
   warnings:
   - {fileID: 4446612717399523081, guid: 6c50adea7a79fb14c93e71855ea5c303, type: 3}
   - {fileID: 754531127197389438, guid: ecb127b4ee59ac947a73dccc980ad3de, type: 3}
@@ -1391,10 +1394,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 728699137}
-    - target: {fileID: 4742869190033687425, guid: 448487b6d7d700f409fbba2631892182, type: 3}
-      propertyPath: attackCooldown
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4742869190033687426, guid: 448487b6d7d700f409fbba2631892182, type: 3}
       propertyPath: m_RootOrder
       value: 6

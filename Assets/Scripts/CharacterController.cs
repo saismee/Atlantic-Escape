@@ -7,13 +7,15 @@ public class CharacterController : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    [Tooltip("How fast the character can move")]
     public float moveSpeed;
 
     private Vector2 moveVector;
 
-    private float punishment;
+    private Vector2 punishment;
 
-    public void Punish(float amount)
+    public void Punish(Vector2 amount)
+    // modifies the player's velocity - quickly drops off
     {
         punishment += amount;
     }
@@ -25,7 +27,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-        punishment = Mathf.Max(punishment - (Time.deltaTime * 3f), 0);
+        punishment = Vector2.Lerp(punishment, Vector2.zero, 1 - Mathf.Pow(0.03f, Time.deltaTime));
         moveVector = Vector2.Lerp(
             moveVector,
             new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized,
@@ -42,16 +44,15 @@ public class CharacterController : MonoBehaviour
             Mathf.Clamp(transform.position.x, -horizontalLimit - 2f, horizontalLimit),
             Mathf.Clamp(transform.position.y, -verticalLimit, verticalLimit)
         );
+        // limits the player's movement to within the screen bounds, except on the left side
 
-        if (transform.position.x < -horizontalLimit - 1f)
-        {
-            SceneManager.LoadScene("Menu");
-        }
+        if (transform.position.x < -horizontalLimit - 1f) GameManager.GameOver();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = moveVector * moveSpeed - new Vector2(punishment, punishment / 2f);
+        rb.velocity = moveVector * moveSpeed - punishment;
         rb.rotation = moveVector.y * 15f;
+        // makes the player look wobbly when moving
     }
 }

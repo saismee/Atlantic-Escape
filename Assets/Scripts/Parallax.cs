@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
+    [Tooltip("How far this object moves compared to its parent (1 is equal, 0 is not at all)")]
     [SerializeField] private float parallaxScale;
     private int offset;
     private float yOffset;
@@ -11,6 +12,7 @@ public class Parallax : MonoBehaviour
     private void Start()
     {
         yOffset = transform.position.y;
+        // keep the initial offset so the layers can be repositioned in the editor
     }
 
     private void Update()
@@ -19,6 +21,7 @@ public class Parallax : MonoBehaviour
         if (transform.position.x < -45)
         {
             offset += 1;
+            // how many tiles this layer should be offset. the number is based on the size of the background.
         }
     }
 }

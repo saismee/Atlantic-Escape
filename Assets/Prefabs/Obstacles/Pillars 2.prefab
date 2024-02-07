@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1751243814523576290}
   - component: {fileID: 1751243814523576291}
   - component: {fileID: 3402196828771575302}
+  - component: {fileID: 909120805200900171}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -125,6 +126,18 @@ PolygonCollider2D:
       - {x: 2.5625, y: -3.625}
       - {x: 2.75, y: -1.75}
       - {x: 2.9375, y: -0.5}
+--- !u!114 &909120805200900171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751243814523576289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e151bc987bc9f74486cad2ab43ef51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751243815442045345
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +149,7 @@ GameObject:
   - component: {fileID: 1751243815442045346}
   - component: {fileID: 1751243815442045347}
   - component: {fileID: 2938370664106216635}
+  - component: {fileID: 6415314258865568332}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -249,6 +263,18 @@ PolygonCollider2D:
       - {x: 0.8125, y: -2.625}
       - {x: 1.1875, y: -2.125}
       - {x: 1.6875, y: 0.6875}
+--- !u!114 &6415314258865568332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751243815442045345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e151bc987bc9f74486cad2ab43ef51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751243816142615849
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +285,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1751243816142615850}
   - component: {fileID: 9113907461498872271}
-  - component: {fileID: -8941506811454391789}
   m_Layer: 0
   m_Name: Pillars 2
   m_TagString: Untagged
@@ -298,15 +323,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningType: 1
   yOffset: 0
---- !u!114 &-8941506811454391789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751243816142615849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9789b91d66cd0a4a97fe63c35324ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

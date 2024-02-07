@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PrefabSpawner : MonoBehaviour
 {
+    [Tooltip("Time in seconds between spawns")]
     public float spawnTime = 0;
     private float spawnCooldown = 0;
 
+    [Tooltip("The prefab to be instantiated")]
     [SerializeField] private GameObject prefab;
 
     private void Update()
@@ -19,6 +21,6 @@ public class PrefabSpawner : MonoBehaviour
 
         spawnCooldown = spawnTime;
         GameObject newPrefab = Instantiate(prefab, transform);
-        newPrefab.transform.position = new Vector2(30, Random.Range(-5.5f, 5.5f));
+        newPrefab.transform.position = new Vector2(30, Random.Range(-5f, 5f));
     }
 }

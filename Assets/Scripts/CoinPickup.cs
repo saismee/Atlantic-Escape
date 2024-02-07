@@ -6,10 +6,8 @@ public class CoinPickup : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            GameManager.Instance.score += 100;
-            Destroy(gameObject);
-        }
+        if (!collision.CompareTag("Player")) return;
+        GameManager.Instance.score += 1000;
+        Destroy(gameObject);
     }
 }

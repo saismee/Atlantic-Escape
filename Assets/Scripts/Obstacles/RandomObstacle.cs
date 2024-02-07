@@ -8,6 +8,7 @@ public class RandomObstacle : MonoBehaviour
     public GameObject[] warnings;
 
     public float spawnTime = 0;
+    [Tooltip("Time in seconds between spawns")]
     private float spawnCooldown = 0;
 
     private void Update()
@@ -23,6 +24,8 @@ public class RandomObstacle : MonoBehaviour
         GameObject newPrefab = Instantiate(obstacles[Random.Range(0, obstacles.Length)], transform);
         newPrefab.transform.position = new Vector2(50, Random.Range(-newPrefab.transform.position.y, newPrefab.transform.position.y));
 
+        // grab the obstacle class and create a warning to display
+        // flashing and destroying is handled by the Warning component!
         Obstacle obstacle = newPrefab.GetComponent<Obstacle>();
         GameObject newWarning = Instantiate(warnings[(int)obstacle.warningType]);
         newWarning.transform.position = new Vector2((Camera.main.orthographicSize * Screen.width / Screen.height) -1.25f, newPrefab.transform.position.y + obstacle.yOffset);

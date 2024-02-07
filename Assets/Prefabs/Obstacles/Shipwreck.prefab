@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5662808691535463772}
   - component: {fileID: -6306220799644180834}
+  - component: {fileID: 5998070673991553553}
   m_Layer: 0
   m_Name: Shipwreck
   m_TagString: Untagged
@@ -47,6 +48,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningType: 0
   yOffset: -1.5
+--- !u!114 &5998070673991553553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662808691535463773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9789b91d66cd0a4a97fe63c35324ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5662808693212887493
 GameObject:
   m_ObjectHideFlags: 0

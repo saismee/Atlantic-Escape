@@ -18,7 +18,7 @@ public class Warning : MonoBehaviour
         blinkTime += Time.deltaTime;
         spriteRenderer.enabled = blinkTime % blinkSpeed > blinkSpeed / 2f;
         
-        if (blinkTime > 2.5f)
+        if (blinkTime > 2.5f / GameManager.Instance.difficulty)
         {
             Destroy(gameObject);
         }

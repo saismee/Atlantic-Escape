@@ -18,10 +18,10 @@ public class RandomObstacle : MonoBehaviour
         spawnCooldown -= Time.deltaTime;
         if (spawnCooldown > 0) return;
 
-        spawnCooldown = spawnTime;
+        spawnCooldown = spawnTime / GameManager.Instance.difficulty;
 
         GameObject newPrefab = Instantiate(obstacles[Random.Range(0, obstacles.Length)], transform);
-        newPrefab.transform.position = new Vector2(45, Random.Range(-newPrefab.transform.position.y, newPrefab.transform.position.y));
+        newPrefab.transform.position = new Vector2(50, Random.Range(-newPrefab.transform.position.y, newPrefab.transform.position.y));
 
         Obstacle obstacle = newPrefab.GetComponent<Obstacle>();
         GameObject newWarning = Instantiate(warnings[(int)obstacle.warningType]);

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public float score;
+    public float difficulty = 1f;
 
     private void Start()
     {
@@ -16,5 +17,10 @@ public class GameManager : MonoBehaviour
             throw new Exception("There cannot be more than one GameManager");
         }
         Instance = this;
+    }
+
+    private void Update()
+    {
+        difficulty += Time.deltaTime / 100f;
     }
 }

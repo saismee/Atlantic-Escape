@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,17 +11,34 @@ public class GameManager : MonoBehaviour
     public float score;
     public float difficulty = 1f;
 
-    private void Start()
+    public bool gameActive;
+
+    private void Awake()
     {
         if (Instance != null)
         {
-            throw new Exception("There cannot be more than one GameManager");
+            Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
         Instance = this;
     }
 
     private void Update()
     {
         difficulty += Time.deltaTime / 100f;
+    }
+
+    public static void Start()
+    {
+        Instance.score = 0f;
+        Instance.difficulty = 1f;
+        SceneManager.LoadScene("Game");
+        Instance.gameActive = true;
+    }
+
+    public static void GameOver()
+    {
+        Instance.gameActive = false;
+        SceneManager.LoadScene("Menu");
     }
 }

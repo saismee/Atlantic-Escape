@@ -26,8 +26,6 @@ public class CharacterController : MonoBehaviour
         // might remove normalized as its an arcade game and we dont really care if they move faster if its more fun
         // should support controllers
 
-        rb.velocity = moveVector * moveSpeed;
-        rb.rotation = moveVector.y * 15f;
 
         float horizontalLimit = (Camera.main.orthographicSize * Screen.width / Screen.height) - 0.75f;
         float verticalLimit = Camera.main.orthographicSize - 0.75f;
@@ -41,5 +39,11 @@ public class CharacterController : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = moveVector * moveSpeed;
+        rb.rotation = moveVector.y * 15f;
     }
 }

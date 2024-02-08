@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d163bf3e77e1674eaab6eeb992deeea
+guid: 24db3ffeaec72ee4eae6419f09c02cd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,23 +124,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin spin_0
+      name: Coin_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a19d10f48dc43b40afd703427500102
-      internalID: -854966402
+      spriteID: fbc8757c8a0952646aa8c4b79bfd704a
+      internalID: -695896164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin spin_1
+      name: Coin_1
       rect:
         serializedVersion: 2
         x: 32
@@ -175,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5110e813cc313e4f942dc829667d023
-      internalID: -104024322
+      spriteID: d3398b5b1993e394db90ea918d420d44
+      internalID: -1875086455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin spin_2
+      name: Coin_2
       rect:
         serializedVersion: 2
         x: 0
@@ -196,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c96d61e05de74c4892084bdb789ea11
-      internalID: -62467938
+      spriteID: adf949802f5e67e40a62f4e4dedaf7f5
+      internalID: 1880862509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin spin_3
+      name: Coin_3
       rect:
         serializedVersion: 2
         x: 32
@@ -217,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 358985639c3dd3541bf381593f89af56
-      internalID: 1905127064
+      spriteID: de443319ed51cd549ba3f1b4e2dbe8b9
+      internalID: 1449531396
       vertices: []
       indices: 
       edges: []
@@ -234,10 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      coin spin_1: -104024322
-      coin spin_3: 1905127064
-      coin spin_2: -62467938
-      coin spin_0: -854966402
+      Coin_0: -695896164
+      Coin_2: 1880862509
+      Coin_1: -1875086455
+      Coin_3: 1449531396
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

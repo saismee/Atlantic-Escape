@@ -24,3 +24,4 @@ public class PrefabSpawner : MonoBehaviour
         newPrefab.transform.position = new Vector2(30, Random.Range(-5f, 5f));
     }
 }
+ 

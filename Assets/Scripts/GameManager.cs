@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (!Instance.gameActive) return;
         difficulty += Time.deltaTime / 100f;
+        score += Time.deltaTime * 100f;
     }
 
     public static void Start()

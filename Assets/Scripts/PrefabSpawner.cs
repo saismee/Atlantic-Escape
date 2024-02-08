@@ -8,8 +8,16 @@ public class PrefabSpawner : MonoBehaviour
     public float spawnTime = 0;
     private float spawnCooldown = 0;
 
+    [Tooltip("Time in seconds before first spawn")]
+    public float spawnDelay = 2;
+
     [Tooltip("The prefab to be instantiated")]
     [SerializeField] private GameObject prefab;
+
+    private void Start()
+    {
+        spawnCooldown = spawnDelay;
+    }
 
     private void Update()
     {

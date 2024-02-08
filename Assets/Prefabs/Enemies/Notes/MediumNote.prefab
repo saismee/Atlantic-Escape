@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7476364681026383794}
   - component: {fileID: 7476364681026383795}
   - component: {fileID: 1204935551464518818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MediumNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169a264ed53830e4498dc72a6dc5cd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punishment: 20
+  power: 2

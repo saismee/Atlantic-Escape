@@ -9,10 +9,13 @@ public class PrefabSpawner : MonoBehaviour
     private float spawnCooldown = 0;
 
     [Tooltip("Time in seconds before first spawn")]
-    public float spawnDelay = 2;
+    [SerializeField] private float spawnDelay = 2;
 
     [Tooltip("The prefab to be instantiated")]
     [SerializeField] private GameObject prefab;
+
+    [Tooltip("The target for spawned enemies. Leave blank if this doesn't spawn BaseEnemy")]
+    [SerializeField] private Transform target;
 
     private void Start()
     {
@@ -28,8 +31,11 @@ public class PrefabSpawner : MonoBehaviour
         if (spawnCooldown > 0) return;
 
         spawnCooldown = spawnTime;
-        GameObject newPrefab = Instantiate(prefab, transform);
-        newPrefab.transform.position = new Vector2(30, Random.Range(-5f, 5f));
+        GameObject newPrefab = Instantiate(prefab, new Vector2(30, Random.Range(-5f, 5f)), transform.rotation, transform);
+
+        if (!newPrefab.TryGetComponent(out BaseEnemy enemy)) return;
+        // find if we're creating an enemy, otherwise return
+        enemy.target = target;
     }
 }
  

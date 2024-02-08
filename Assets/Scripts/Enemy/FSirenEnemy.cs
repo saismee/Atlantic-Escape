@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FSirenEnemy : MonoBehaviour
+public class FSirenEnemy : BaseEnemy
 {
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -13,7 +13,8 @@ public class FSirenEnemy : MonoBehaviour
     [Tooltip("A list of projectiles to throw randomly")]
     [SerializeField] private GameObject[] notes;
 
-    public Transform target;
+    //public Transform target;
+    // we inherit this from BaseEnemy
 
     private float timeSinceLastAttack;
     [Tooltip("Time in seconds between attacks")]
@@ -80,7 +81,7 @@ public class FSirenEnemy : MonoBehaviour
             // clone a random note
 
             Rigidbody2D noteRb = newNote.GetComponent<Rigidbody2D>();
-            noteRb.velocity = new Vector3(target.position.x - transform.position.x, 10, 0); // launch the note towards the player
+            noteRb.velocity = new Vector3(target.position.x - transform.position.x, 6, 0); // launch the note towards the player
             noteRb.angularVelocity = Random.Range(-40f, 40f); // makes the note spin slightly
 
             yield return new WaitForSeconds(0.75f);

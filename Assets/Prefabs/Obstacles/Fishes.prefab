@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d98772f2c1c3594784bfc11b2c24b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warningType: 1
+  warningType: 0
   yOffset: 0
 --- !u!1 &6489213513251245567
 GameObject:

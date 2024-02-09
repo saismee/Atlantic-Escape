@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour
     public static void SaveLeaderboard()
     {
         string data = JsonHelper.ToJson(Instance.leaderboard);
-        Debug.Log(data);
-        //PlayerPrefs.SetString("ScoreLeaderboard", data);
+        //Debug.Log(data);
+        PlayerPrefs.SetString("ScoreLeaderboard", data);
     }
     public static void LoadLeaderboard()
     {

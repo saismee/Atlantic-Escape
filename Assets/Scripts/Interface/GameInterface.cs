@@ -5,10 +5,10 @@ using TMPro;
 
 public class GameInterface : MonoBehaviour
 {
-    [SerializeField] private TMP_Text highscoreText;
+    [SerializeField] private TMP_Text scoreText;
 
     private void Update()
     {
-        highscoreText.text = "Score: " + Mathf.Floor(GameManager.Instance.score).ToString();
+        scoreText.text = "Score: " + Mathf.Floor(GameManager.Instance.score).ToString();
     }
 }

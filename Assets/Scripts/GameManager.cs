@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         LoadLeaderboard();
-        AddHighscore("boo", 123);
     }
 
     private void Update()

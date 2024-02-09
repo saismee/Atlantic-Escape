@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     public static void GameOver()
     {
         Instance.gameActive = false;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("GameOver");
     }
 
     public static void SaveLeaderboard()

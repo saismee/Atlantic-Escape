@@ -7,6 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.anyKeyDown) GameManager.Start();
+        if (Input.anyKeyDown) GameManager.StartGame();
     }
 }
